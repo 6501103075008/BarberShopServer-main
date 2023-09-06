@@ -9,9 +9,17 @@ $email = $_POST['email'];
 $sql = "INSERT INTO register (name, password, phone, email) VALUES ('$name', '$password', '$phone', '$email')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "บันทึกข้อมูลเรียบร้อยแล้ว";
+    echo '<script>
+            setTimeout(function() {
+                window.location.href = "login.html"; // แทน new_page.php ด้วย URL ของหน้าที่คุณต้องการไป
+            }, 5000);
+        </script>';
 } else {
-    echo "เกิดข้อผิดพลาด: " . $conn->error;
+    echo '<script>
+            setTimeout(function() {
+                window.location.href = "index.html"; // แทน new_page.php ด้วย URL ของหน้าที่คุณต้องการไป
+            }, 5000);
+        </script>';
 }
 
 $conn->close();
