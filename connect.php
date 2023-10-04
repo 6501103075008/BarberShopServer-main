@@ -12,6 +12,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("การเชื่อมต่อผิดพลาด: " . $conn->connect_error);
 } else {
-    //echo "เชื่อมต่อฐานข้อมูลสำเร็จแล้ว!";
+    echo "เชื่อมต่อฐานข้อมูลสำเร็จแล้ว!";
 }
 ?>
